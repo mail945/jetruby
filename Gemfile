@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'listen', '~> 3.0.5'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'foreman'
 
 # Front-end stuff
 gem 'webpacker'
