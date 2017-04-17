@@ -41,7 +41,7 @@ end
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
 ###   command %{rbenv install 2.4.1
-command %{rvm install ruby-2.4.1}
+command %[rvm install ruby-2.4.1]
  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
 end
 
