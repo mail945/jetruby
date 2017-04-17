@@ -12,6 +12,7 @@ gem 'puma', '~> 3.0'
 gem 'hamlit', '~> 2.8'
 gem 'simple_form'
 
+gem 'listen', '~> 3.0.5'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
@@ -32,6 +33,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
+  #gem 'listen', '~> 3.0.5'
   gem 'letter_opener'
 end
