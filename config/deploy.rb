@@ -1,8 +1,8 @@
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
-require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
-# require 'mina/rvm'    # for rvm support. (https://rvm.io)
+#require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
+ require 'mina/rvm'    # for rvm support. (https://rvm.io)
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
@@ -11,8 +11,8 @@ require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :application_name, 'jetruby'
-set :domain, '172.16.1.42'
-set :deploy_to, '/home/deploy'
+set :domain, '172.16.1.44'
+set :deploy_to, '/home/deploy/jetruby'
 set :repository, 'git://github.com/mail945/jetruby'
 set :branch, 'master'
 
@@ -31,16 +31,16 @@ set :ssh_options, '-A'
 task :environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-invoke :'rbenv:load'
+#invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  # invoke :'rvm:use', 'ruby-1.9.3-p125@default'
+ invoke :'rvm:use', ' 2.4.1p111@default'
 end
 
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
-   command %{rbenv install 2.4.1}
+###   command %{rbenv install 2.4.1}
 end
 
 desc "Deploys the current version to the server."
