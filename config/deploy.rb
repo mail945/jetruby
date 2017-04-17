@@ -34,14 +34,14 @@ task :environment do
 #invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
- invoke :'rvm:use', ' 2.4.1p111@default'
+ invoke :'rvm:use', '2.4.1p111@default'
 end
 
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
 task :setup do
 ###   command %{rbenv install 2.4.1
-command %{rvm install ruby-2.4.1p111}
+command %{rvm install ruby-2.4.1}
  comment "Be sure to edit '#{fetch(:shared_path)}/config/database.yml', 'secrets.yml' and puma.rb."
 end
 
